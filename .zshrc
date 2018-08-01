@@ -8,7 +8,6 @@ zplug 'zsh-users/zsh-completions'
 zplug "zsh-users/zsh-syntax-highlighting"
 # 履歴からコマンドを提案
 zplug "zsh-users/zsh-autosuggestions"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 # プロンプトテーマ
 zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
@@ -22,11 +21,13 @@ if ! zplug check --verbose; then
     fi
 fi
 
+# 環境変数
+AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
+
+# プロンプトテーマ
 # コマンドをリンクして、PATH に追加し、プラグインは読み込む
 zplug load --verbose
 
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
-
-
