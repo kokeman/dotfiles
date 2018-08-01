@@ -21,12 +21,12 @@ if ! zplug check --verbose; then
     fi
 fi
 
-# 環境変数
-AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
-
-# プロンプトテーマ
 # コマンドをリンクして、PATH に追加し、プラグインは読み込む
 zplug load --verbose
+
+
+# 環境変数
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
