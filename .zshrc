@@ -24,6 +24,10 @@ fi
 # コマンドをリンクして、PATH に追加し、プラグインは読み込む
 zplug load --verbose
 
+# 補完候補をタブで選択。補完候補が２つ以上なければすぐに補完
+zstyle ':completion:*:default' menu select=2
+# 補完候補に色をつける
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # 環境変数
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
