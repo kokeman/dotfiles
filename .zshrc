@@ -32,6 +32,3 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # 環境変数
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
