@@ -11,6 +11,8 @@ zplug "zsh-users/zsh-autosuggestions"
 # プロンプトテーマ
 zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+# venvを自動でactivateとdeactivate
+zplug "Tarrasch/zsh-autoenv" 
 
 
 # 未インストール項目をインストールする
