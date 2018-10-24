@@ -34,3 +34,11 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # 環境変数
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 
+# pyenv
+export  PYENV_ROOT=$HOME/.pyenv
+export  PATH=$PYENV_ROOT/bin:$PATH
+eval  "$(pyenv init -)"
+
+# CUDA
+export  CUDA_PATH=/usr/local/cuda-9.2
+export  LD_LIBRARY_PATH=$CUDA_PATH/lib64:$LD_LIBRARY_PATH
