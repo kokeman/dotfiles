@@ -24,7 +24,7 @@ if ! zplug check --verbose; then
 fi
 
 # コマンドをリンクして、PATH に追加し、プラグインは読み込む
-zplug load --verbose
+zplug load
 
 # 補完候補をタブで選択。補完候補が２つ以上なければすぐに補完
 zstyle ':completion:*:default' menu select=2
@@ -42,3 +42,4 @@ eval  "$(pyenv init -)"
 # CUDA
 export  CUDA_PATH=/usr/local/cuda-9.2
 export  LD_LIBRARY_PATH=$CUDA_PATH/lib64:$LD_LIBRARY_PATH
+
