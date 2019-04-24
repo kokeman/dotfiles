@@ -17,6 +17,12 @@ zplug "Tarrasch/zsh-autoenv"
 zplug "b4b4r07/enhancd", use:init.sh
 # gist
 zplug "b4b4r07/gist", from:gh-r, as:command, use:"*darwin*amd64*"
+# fzf
+zplug "junegunn/fzf-bin", \
+    from:gh-r, \
+    as:command, \
+    rename-to:fzf, \
+    use:"*darwin*amd64*"
 # fzf history
 zplug "kokeman/af815d5a4f0c7f31d423f4906d85078a", from:gist
 # 結果を上に表示
