@@ -13,7 +13,19 @@ zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 # venvを自動でactivateとdeactivate
 zplug "Tarrasch/zsh-autoenv" 
+# enhancd
+zplug "b4b4r07/enhancd", use:init.sh
+# gist
+zplug "b4b4r07/gist", from:gh-r, as:command, use:"*darwin*amd64*"
+# fzf history
+zplug "kokeman/af815d5a4f0c7f31d423f4906d85078a", from:gist
+# 結果を上に表示
+# export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+export FZF_DEFAULT_OPTS='--color=fg+:11 --height 70% --reverse --select-1 --exit-0 --multi'
 
+
+#alias
+alias ls='ls -G'
 
 # 未インストール項目をインストールする
 if ! zplug check --verbose; then
@@ -38,6 +50,10 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 export  PYENV_ROOT=$HOME/.pyenv
 export  PATH=$PYENV_ROOT/bin:$PATH
 eval  "$(pyenv init -)"
+
+# Path Go
+export GOPATH=${HOME}/go
+export PATH=$GOPATH/bin:$PATH
 
 # CUDA
 export  CUDA_PATH=/usr/local/cuda-9.2
