@@ -46,13 +46,14 @@ zinit light zdharma/fast-syntax-highlighting # コマンド・引数に色をつ
 # fzf
 zinit ice from"gh-r" as"program"
 zinit load junegunn/fzf-bin
-export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+# fzf を ^rで使えるように（履歴から検索できるように）
 function select-history() {
   BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
   CURSOR=$#BUFFER
 }
 zle -N select-history
 bindkey '^r' select-history
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border' # 上から表示するように
 
 
 # 補完候補をタブで選択。補完候補が２つ以上なければすぐに補完
