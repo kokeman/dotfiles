@@ -43,6 +43,7 @@ alias ls='ls -G'
 zinit light zsh-users/zsh-autosuggestions # 文字入力時に直近の履歴をサジェスト
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23' # Solarized dark用
 zinit light zdharma/fast-syntax-highlighting # コマンド・引数に色をつける
+
 # fzf
 zinit ice from"gh-r" as"program"
 zinit load junegunn/fzf-bin
@@ -55,7 +56,9 @@ zle -N select-history
 bindkey '^r' select-history
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border' # 上から表示するように
 
-
+# 補完機能を有効にする
+autoload -U compinit
+compinit
 # 補完候補をタブで選択。補完候補が２つ以上なければすぐに補完
 zstyle ':completion:*:default' menu select=2
 # 補完候補に色をつける
